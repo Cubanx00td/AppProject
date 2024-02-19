@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="529.0" prefWidth="767.0" style="-fx-background-color: #ffc04d; -fx-border-color: black; -fx-border-width: 15;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Scene2Controller">
+   <children>
+      <Label layoutX="31.0" layoutY="23.0" text="Order Summary">
+         <font>
+            <Font name="Trebuchet MS Bold" size="28.0" />
+         </font></Label>
+      <TextArea fx:id="txtAreaSummary" layoutX="31.0" layoutY="70.0" prefHeight="251.0" prefWidth="706.0">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font></TextArea>
+      <Label layoutX="25.0" layoutY="374.0" text="Would you like to leave a tip?">
+         <font>
+            <Font name="Tw Cen MT Condensed" size="24.0" />
+         </font></Label>
+      <RadioButton fx:id="radYes" layoutX="25.0" layoutY="408.0" mnemonicParsing="false" onAction="#tipYes" text="Yes">
+         <toggleGroup>
+            <ToggleGroup fx:id="Tip" />
+         </toggleGroup>
+         <font>
+            <Font name="Segoe UI Bold Italic" size="13.0" />
+         </font></RadioButton>
+      <RadioButton fx:id="radNo" layoutX="145.0" layoutY="408.0" mnemonicParsing="false" onAction="#tipNo" text="No" toggleGroup="$Tip">
+         <font>
+            <Font name="Segoe UI Bold Italic" size="13.0" />
+         </font></RadioButton>
+      <ComboBox fx:id="cbAmount" disable="true" layoutX="31.0" layoutY="465.0" prefWidth="150.0" />
+      <Label layoutX="31.0" layoutY="440.0" text="Choose amount:">
+         <font>
+            <Font name="Tw Cen MT Condensed" size="24.0" />
+         </font></Label>
+      <Button fx:id="btnPay" disable="true" layoutX="699.0" layoutY="478.0" mnemonicParsing="false" onAction="#pay" style="-fx-background-color: black;" text="PAY" textFill="#d19016">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Label fx:id="txtPayment" disable="true" layoutX="457.0" layoutY="380.0" text="Choose Payment Method">
+         <font>
+            <Font name="Tw Cen MT Condensed" size="24.0" />
+         </font></Label>
+      <RadioButton fx:id="radCredit" disable="true" layoutX="448.0" layoutY="419.0" mnemonicParsing="false" text="Credit Card">
+         <toggleGroup>
+            <ToggleGroup fx:id="PayMethod" />
+         </toggleGroup>
+         <font>
+            <Font name="Microsoft JhengHei Bold" size="14.0" />
+         </font></RadioButton>
+      <RadioButton fx:id="radDebit" disable="true" layoutX="449.0" layoutY="443.0" mnemonicParsing="false" text="Debit Card" toggleGroup="$PayMethod">
+         <font>
+            <Font name="Microsoft JhengHei Bold" size="14.0" />
+         </font></RadioButton>
+      <RadioButton fx:id="radGPay" disable="true" layoutX="572.0" layoutY="419.0" mnemonicParsing="false" text="Google Pay" toggleGroup="$PayMethod">
+         <font>
+            <Font name="Microsoft JhengHei Bold" size="14.0" />
+         </font></RadioButton>
+      <RadioButton fx:id="radCash" disable="true" layoutX="572.0" layoutY="442.0" mnemonicParsing="false" text="Cash" toggleGroup="$PayMethod">
+         <font>
+            <Font name="Microsoft JhengHei Bold" size="14.0" />
+         </font></RadioButton>
+      <Button fx:id="btnEdit" layoutX="31.0" layoutY="321.0" mnemonicParsing="false" onAction="#edit" prefHeight="26.0" prefWidth="44.0" style="-fx-background-color: black;" text="EDIT" textFill="#d19016">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Button fx:id="btnConfirm" disable="true" layoutX="658.0" layoutY="321.0" mnemonicParsing="false" onAction="#confirm" prefHeight="26.0" prefWidth="78.0" style="-fx-background-color: black;" text="CONFIRM" textFill="#d19016">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+   </children>
+</AnchorPane>
